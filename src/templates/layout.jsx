@@ -1,15 +1,15 @@
 import {Box, CssBaseline, Grid} from '@mui/material';
 import { grey } from '@mui/material/colors';
 
-export default function Layout(){
-    // const [menu, header] = children;
+export default function Layout({children}){
+    const [menu, header] = children;
 
     return (
         <Box style={{display: "flex"}}>
             <CssBaseline/>
             <Grid container m={2}>
                 <Grid item flexBasis={260}>
-                    <Grid xs={12}>menu</Grid>
+                    <Grid xs={12}>{menu}</Grid>
                     {/* <Grid xs={12} bgcolor={grey[400]} height={100}>inicio</Grid>
                     <Grid xs={12} bgcolor={grey[400]} height={100}>tu</Grid>
                     <Grid xs={12} bgcolor={grey[400]} height={100}>suscripciones</Grid>
@@ -18,7 +18,7 @@ export default function Layout(){
                     <Grid xs={12} bgcolor={grey[400]} height={100}>configuracion</Grid> */}
                 </Grid>
                 <Grid item flex={1}>
-                    <Grid xs={12} bgcolor={grey[400]} height={100}>header</Grid>
+                    <Grid xs={12} bgcolor={grey[400]} height={100}>{header}</Grid>
                     <Grid xs={12} bgcolor={grey[400]} height={100}>branding</Grid>
                     <Grid container>
                     <Grid container>

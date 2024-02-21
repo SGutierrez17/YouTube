@@ -1,8 +1,13 @@
 import Layout from "../templates/layout";
+import Menu from "../organisms/menu";
+import Header from '../organisms/header'
 
 function App() {
 return (
-    <Layout />
+    <Layout>
+        <Menu /> 
+        <Header />
+    </Layout>
 );
 }
 
